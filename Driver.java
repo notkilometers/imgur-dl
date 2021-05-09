@@ -9,18 +9,16 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 public class Driver {
     WebElement button;
     public WebDriver driver;
-    ArrayList<String> urls;
+    ArrayList<String> urls = new ArrayList<String>();
     
-    public boolButton(String url) 
+    public Driver (String url) 
     {
         FirefoxBinary firefoxBinary = new FirefoxBinary();
         FirefoxOptions options = new FirefoxOptions();
-        
         options.setBinary(firefoxBinary);
         options.setHeadless(true);  
-        driver = new FirefoxDriver(options);
-        urls = = new ArrayList<String>();
         
+        driver = new FirefoxDriver(options);
         driver.get(url);
     }
     
