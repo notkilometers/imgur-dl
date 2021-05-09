@@ -1,0 +1,11 @@
+<servlet>
+    <description>This servlet sends file to client</description>
+    <display-name>urlServlet</display-name>
+    <servlet-name>urlServlet</servlet-name>
+    <servlet-class>net.codejava.urlServlet</servlet-class>
+</servlet>
+ 
+<servlet-mapping>
+    <servlet-name>urlServlet</servlet-name>
+    <url-pattern>/urlServlet</url-pattern>
+</servlet-mapping>  
