@@ -1,3 +1,5 @@
+package com.mycompany.imgurdl;
+
 import com.google.common.io.Files;
 import java.util.*; 
 import java.awt.*;  
@@ -62,8 +64,14 @@ public class Album
             urlText.setBounds(15, 45, 270, 40); 
             pathText.setBounds(15, 90, 270, 40); 
             
+            frame.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent we){
+                System.exit(0);
+            }
+            });
+            
             button.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e)
+            public void actionPerformed(ActionEvent ee)
             {
                 url = urlText.getText();
                 filepath = pathText.getText();
@@ -104,3 +112,4 @@ public class Album
             catch(Exception e) {}
         }
 }
+
