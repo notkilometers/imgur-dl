@@ -1,3 +1,5 @@
+package com.mycompany.imgurdl;
+
 import java.util.*; 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -64,3 +66,4 @@ public class Driver {
         }
     }
 }
+
