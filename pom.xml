@@ -42,7 +42,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.mypackage.MyClass</mainClass>
+            <mainClass>com.mycompany.imgurdl.Album</mainClass>
           </manifest>
         </archive>
       </configuration>
