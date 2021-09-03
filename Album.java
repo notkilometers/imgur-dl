@@ -111,7 +111,6 @@ public class Album
             // read url into a bufferedimage object
             BufferedImage img = ImageIO.read(urlObj);
             // set file to object with full path
-            System.out.println(url.split("/",-2)[3]);
             File file = new File(filepath + count + "_" + url.split("/",-2)[3]);
             // write image to drive
             ImageIO.write(img, "jpg", file);
