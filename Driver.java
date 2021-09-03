@@ -15,16 +15,18 @@ public class Driver {
     
     public Driver (String url) 
     {
+        // init driver
         FirefoxBinary firefoxBinary = new FirefoxBinary();
         FirefoxOptions options = new FirefoxOptions();
         options.setBinary(firefoxBinary);
-        options.setHeadless(true);  
-        
+        options.setHeadless(true);
         driver = new FirefoxDriver(options);
+        
+        // get specified page
         driver.get(url);
     }
     
-    public boolean getbutton()
+    public boolean getbutton() // get load button if present
     {
         try
         {
@@ -37,7 +39,7 @@ public class Driver {
         }
     }
     
-    public void click()
+    public void click() // click button if present
     {
         try
         {
@@ -46,17 +48,18 @@ public class Driver {
         catch (Exception e) {}
     }
     
-    public boolean getUrls()
+    public boolean getUrls() // get urls of images 
     {
         try
         {
+            // find elements that contain a media image
             List<WebElement> containers = driver.findElements(By.className("Gallery-Content--mediaContainer"));
         
-            for (WebElement img : containers)
-            {
+            // for each container, find the image inside and add to list
+            containers.forEach(img->{
                 WebElement k = img.findElement(By.className("image-placeholder"));
                 urls.add(k.getAttribute("src"));
-            }
+            });
         
             return true;
         }
@@ -66,4 +69,3 @@ public class Driver {
         }
     }
 }
-
